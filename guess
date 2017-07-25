@@ -1,0 +1,14 @@
+import random
+a = random.randint(0,100)
+num = int(input("输入数字:"))
+bingo = 1
+while bingo == 1:
+    if num > a:
+        print("大了")
+        num = int(input("输入数字:"))
+    elif num < a:
+        print("小了")
+        num = int(input("输入数字:"))
+    elif num == a:
+        print("bingo")
+        bingo = 0
