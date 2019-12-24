@@ -1,6 +1,5 @@
 /*backend.getdrafts.com
-
-http-response https:\/\/backend\.getdrafts\.com\/api\/.*\/verification* requires-body=1,max-size=0,script-path=js/draft.js
+http-response https:\/\/backend\.getdrafts\.com\/api\/.*\/verification* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/zackzeng00/Helloword/master/drafts5.js
 */
 var obj = JSON.parse($response.body);
 
