@@ -1,0 +1,8 @@
+#!name=Agenda Crack
+#!desc=请先在设置中创建并登录 Agenda 账户（By @imsingee）
+
+[MITM]
+hostname = %APPEND% accounts.agenda.com
+
+[Map Local]
+^https://accounts.agenda.com/users/.*/license$ data="E3E88422.json"
