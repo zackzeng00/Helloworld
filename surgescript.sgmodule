@@ -1,0 +1,10 @@
+#!name=SCRIPT for myself
+#!desc=自用脚本
+#!system=ios
+
+[Script]
+Textnow.js = type=http-response,pattern=^https?:\/\/api\.textnow\.me\/api2.0\/users\/.*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wubulaba/surgescript/master/Script/Textnow.js,script-update-interval=0
+PicsArt.js = type=http-response,pattern=^https?:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wubulaba/surgescript/master/Script/PicsArt.js,script-update-interval=0
+AdGuard.js = type=http-response,pattern=^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wubulaba/surgescript/master/Script/AdGuard.js,script-update-interval=0
+[MITM]
+hostname = %APPEND% api.textnow.me, api.picsart.com, api.meiease.cn, mobile-api.adguard.com
