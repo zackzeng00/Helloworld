@@ -1,0 +1,16 @@
+#!name=❏ 去除 𝗬𝗼𝘂𝗧𝘂𝗯𝗲 广告 
+#!desc=去除 Youtube 广告（Beta）
+# IOS > 15
+# 删除 瀑布流、视频、搜索中出现的广告和Shorts，
+# 删除 Shorts 内的视频广告
+# 广告信息可能有遗漏，可能偶现广告
+# inspired by @Choler & @DivineEngine & @app2smile
+
+[Script]
+# 该模块已足够全面，无需其他规则混用，防止重写规则被破坏。
+youtube-proto = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence),requires-body=1,binary-body-mode=1,max-size=3145728,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js
+# 使用脚本直接返回状态码而不是 reject， 用于提升视频加载速度。
+youtube-fake = type=http-response,pattern=^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad,requires-body=0,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube-fake.js
+
+[MITM]
+hostname = %APPEND% *.googlevideo.com, youtubei.googleapis.com
