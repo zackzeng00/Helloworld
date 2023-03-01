@@ -1,0 +1,13 @@
+#!name=问真八字解锁永久钻石会员
+#!desc=问真八字解锁永久钻石会员
+#软件版本:2.1.0
+#脚本作者:Hausd0rff
+#更新时间:2023-02-28
+#电报频道:https://t.me/yqc_123
+#使用声明：️仅供学习交流，🈲️商业用途
+
+[Script]
+问真八字解锁永久钻石会员 = type=http-response,pattern=^https?:\/\/bzpp2\.iwzbz\.com\/api\/v1\.1\/user\/getpwnewios,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/WzbzDiamondVipCrack.js
+
+[MITM]
+hostname= %APPEND% bzpp2.iwzbz.com
